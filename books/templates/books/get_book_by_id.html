@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Книга {{ book.id }}</title>
+</head>
+<body>
+    <h1>Книга {{ book.id }}</h1>
+    <h2>{{ book.title }}. {{ book.year_of_publishing }}г. Тираж: {{ book.copies_printed }} экз.</h2>
+    <li> автор {{ book.author_full_name }}</li>
+    <li> Краткое описание: {{ book.short_description }}</li>
+</body>
+</html>

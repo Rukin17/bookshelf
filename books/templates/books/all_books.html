@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <meta charset="UTF-8">
+    <title>Список книг</title>
+</head>
+<body>
+    <p>Список книг</p>
+    <table>
+    <colgroup span="6"></colgroup>
+    <tr>
+        <th>Id</th>
+        <th>Название книги</th>
+        <th>Автор</th>
+        <th>Дата издания</th>
+        <th>Тираж</th>
+        <th>Краткое описание</th>
+    </tr>
+        {% for book in  all_books %}
+        <tr>
+        <td>{{ book.id }}</td>
+        <td>{{ book.title }}</td>
+        <td>{{ book.author_full_name }}</td>
+        <td>{{ book.year_of_publishing }}</td>
+        <td>{{ book.copies_printed }}</td>
+        <td>{{ book.short_description }}</td>
+        {% endfor %}
+        </tr>
+        
+    </table>  
+</body>
+</html>
+
+
+
